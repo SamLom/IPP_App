@@ -1,0 +1,21 @@
+#abcd {
+    150px;
+    height: 500px;
+    overflow: scroll;
+}
+
+.butlist {
+    min-width: 30em;
+    max-width: 46em;
+}
+
+.lr {
+    margin: -10
+}
+
+.food-list-btn {
+    height: 15%;
+    font-size: 18px;
+    color: dimgray;
+    background-color: #ecf8f2;
+}
