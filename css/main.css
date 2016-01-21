@@ -23,6 +23,10 @@ background-color:whitesmoke; }
     background-color: #40bf80;
 }
 
+.btn-info {
+    background-color: #40bf80;
+}
+
 #navBar {
     height: 100px;
     width: 100%;
