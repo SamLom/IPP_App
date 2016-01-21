@@ -2,12 +2,14 @@
 {
     font-size:12px;
     font-family:verdana,helvetica,arial,sans-serif;
+    background-color: red;
 }
 
 .amChartsPeriodSelector
 {
     font-size:12px;
     font-family:verdana,helvetica,arial,sans-serif;
+    background-color: red;
 }
 
 .amChartsButtonSelected
@@ -35,6 +37,7 @@
    margin: 1px;
    outline: none;
    box-sizing: border-box;
+    background-color: red;
 }
 
 .amChartsCompareList
@@ -42,12 +45,14 @@
    border-style:solid;
    border-color:#CCCCCC;
    border-width:1px;
+    background-color: red;
 }
 
 .amChartsCompareList div
 {
    -webkit-box-sizing: initial;
    box-sizing: initial;
+    background-color: red;
 }
 
 .amChartsInputField
