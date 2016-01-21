@@ -18,3 +18,7 @@
     color: dimgray;
     background-color: #ecf8f2;
 }
+
+#add {
+	display: none;
+}
