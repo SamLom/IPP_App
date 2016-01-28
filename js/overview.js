@@ -1,5 +1,8 @@
 	AmCharts.ready(function () {
-	    generateChartData();
+            var wh = $(window).height();
+            var chartheigh  = Math.round(wh-wh/5)
+            $("#chartdiv").height(chartheigh);
+            generateChartData();
 	    createStockChart();
 	});
 
@@ -47,7 +50,7 @@
 	    // first stock panel
 	    var stockPanel1 = new AmCharts.StockPanel();
 	    stockPanel1.showCategoryAxis = false;
-	    stockPanel1.title = "Weight";
+	    stockPanel1.title = "Gewicht";
 	    stockPanel1.percentHeight = 70;
 
 	    // graph of first stock panel
@@ -70,7 +73,7 @@
 
 	    // second stock panel
 	    var stockPanel2 = new AmCharts.StockPanel();
-	    stockPanel2.title = "Calorie";
+	    stockPanel2.title = "Kalorien";
 	    stockPanel2.percentHeight = 30;
 	    var graph2 = new AmCharts.StockGraph();
 	    graph2.valueField = "volume";
@@ -108,21 +111,22 @@
 	    periodSelector.dateFormat = "DD-MM-YYYY JJ:NN";
 	    periodSelector.inputFieldWidth = 150;
 	    periodSelector.periods = [{
-	        period: "YYYY",
+	        period: "DD",
+	        count: 7,
+	        label: "1 Woche",
+            selected: true
+				}, {
+	        period: "MM",
 	        count: 1,
-	        label: "1 year"
+	        label: "1 Monate"
 				}, {
 	        period: "MM",
 	        count: 6,
-	        label: "6 months"
+	        label: "6 Monat"
 				}, {
-	        period: "MM",
+	        period: "YYYY",
 	        count: 1,
-	        label: "1 month"
-				}, {
-	        period: "DD",
-	        count: 7,
-	        label: "1 week"
+	        label: "1 Jahr"
 				}, {
 	        period: "MAX",
 	        label: "MAX"
@@ -133,6 +137,9 @@
 	    panelsSettings.mouseWheelZoomEnabled = true;
 	    panelsSettings.usePrefixes = true;
 	    chart.panelsSettings = panelsSettings;
+chart.responsive = {
+  "enabled": true
+};
 
 
 	    chart.write('chartdiv');

@@ -1,24 +1,30 @@
 #abcd {
     overflow: scroll;
-    height: 1200px;
-}
 
-.butlist {
-    min-width: 30em;
-    max-width: 46em;
 }
 
 .lr {
-    margin: -10
-}
-
-.food-list-btn {
-    height: 15%;
-    font-size: 18px;
-    color: dimgray;
-    background-color: #ecf8f2;
+    margin: -10;
 }
 
 #add {
 	display: none;
+}
+
+#search_bar {
+    height: 50px;
+}
+
+#search-button {
+     height: 50px;
+    width: 50px;
+}
+
+.food-list-btn {
+    height: 70px;
+    padding-top: 25px;
+}
+
+.plus-button {
+    background-color: #f2ffcc;
 }

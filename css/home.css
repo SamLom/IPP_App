@@ -1,0 +1,91 @@
+.trash-button {
+    height: 70px;
+}
+
+.trash-button .glyphicon {
+    font-size: 50px;
+}
+
+.meal_item {
+    font-size: 18px;
+    font-weight: lighter;
+    height: 70px;
+    padding-top: 25px;
+}
+
+.my-legend {
+    margin-right: 40px;
+}
+
+/*#info-cal {
+    background-color: white;
+    height: 100px;
+    width: 100px;
+} */
+
+.progress {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 30%;
+    height: 50px;
+    margin-top: 1%;
+}
+
+.progress-bar {
+    font-size: 20px;
+    padding-top: 13px;
+}
+
+.my-legend .legend-scale ul {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+    margin-left:
+}
+
+.my-legend .legend-scale ul li {
+    display: block;
+    float: left;
+    width: 50px;
+    margin-bottom: 6px;
+    text-align: center;
+    font-size: 80%;
+    list-style: none;
+}
+
+.my-legend ul.legend-labels li span {
+    display: block;
+    float: left;
+    height: 15px;
+    width: 50px;
+}
+
+#legend {
+    margin-left: 5%;
+}
+
+.label {
+   font-size: 18px;
+    font-weight: lighter;
+    background-color: aqua;
+}
+
+.color {
+    background-color: bisque;
+    width: 20px;
+    height: 20px;
+    
+}
+
+#label-1 {
+    background-color: red;
+}
+
+#label-2 {
+    background-color: green;
+}
+
+#label-3 {
+    background-color: aqua;
+}
