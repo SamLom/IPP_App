@@ -1,5 +1,3 @@
-/* CSS AA */
-
 
 .footer {  
 height:80px;
@@ -9,18 +7,18 @@ bottom: 0%;
 width: 100%;
 background-color:whitesmoke; }
 
-.btn-group {
-    
-
+#header {
+    height: 150px;
 }
 
-# header {
-    z-index:1000000;
-    position: fixed;
+.div_header {
+    padding-top: 40px;
+    font-size: 200%
 }
 
 #footer {
     background-color: #40bf80;
+    height: 150px;
 }
 
 .btn-info {
@@ -105,7 +103,7 @@ background-color:whitesmoke; }
 
 body {
   font-family: Arial;
-  background-color: aliceblue;
+  background-color: #ecf9f2;
 }
 
 .header {
@@ -228,3 +226,80 @@ display: none;
 .hfi .glyphicon {
     font-size: 50px;
 }
+
+#calorieSum {
+    margin-top: 0%;
+}
+
+.progress {
+    margin-top: 5%;
+}
+
+#mealsDiv {
+    margin-top: 8%;
+}
+
+#headerCalorieSum {
+    text-align: center;
+    font-size: 200%;
+    margin-top: 6%;
+}
+
+.progress {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 30%;
+}
+
+#homebutton, #overviewbutton, #addbutton, #heartbutton, #cogbutton {
+    height: 200px;
+}
+
+.btn-group .glyphicon {
+    font-size: 40px;
+    padding-bottom: 50%;
+}
+
+#plate_div {
+    text-align: center;
+}
+
+#plate {
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    margin-top: 7%;
+    margin-left: 30%;
+    border-radius: 100%
+
+}
+
+.img  {
+    height: 50px;
+    width: 50px;
+}
+
+.circle-container {
+    position: relative;
+    width: 24em;
+    height: 24em;
+    padding: 2.8em;
+    /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+    border: dashed 1px;
+    border-radius: 50%;
+    margin: 1.75em auto 0;
+}
+.circle-container a {
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 4em; height: 4em;
+    margin: -2em;
+}
+.circle-container img { display: block; width: 100%; }
+.deg0 { transform: translate(12em); } /* 12em = half the width of the wrapper */
+.deg45 { transform: rotate(45deg) translate(12em) rotate(-45deg); }
+.deg135 { transform: rotate(135deg) translate(12em) rotate(-135deg); }
+.deg180 { transform: translate(-12em); }
+.deg225 { transform: rotate(225deg) translate(12em) rotate(-225deg); }
+.deg315 { transform: rotate(315deg) translate(12em) rotate(-315deg); }

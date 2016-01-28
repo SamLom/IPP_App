@@ -20,9 +20,9 @@
 
     <section id="home">
 
-        <div class="header">HOME</div>
-
-
+        <div id="header" class="header">
+         <div class="div_header">HOME</div>
+        </div>
 
 
         <!--    TimeWheel    -->
@@ -46,7 +46,35 @@
                 <span class='nav-item'>Sun</span>
             </nav>
         </header>
-
+        
+        <div id="plate_div" >
+            <div id="plate" class=".col-xs-6 .col-md-4">
+               
+                <!--
+                <div id="food-img1">
+                    <img src="Apfel.png">
+                </div>
+                <div id="food-img2">
+                    <img src="Kaese.png">
+                </div>
+                <div id="food-img3">
+                    <img src="Pizza.png">
+                </div> -->
+                
+                <div class='circle-container'>
+    <a href='#' class='center'><img src='Apfel.png'></a>
+    <a href='#' class='deg0'><img src='Kaese.png'></a>
+    <a href='#' class='deg45'><img src='Pizza.png'></a>
+    <a href='#' class='deg135'><img src='image.jpg'></a>
+    <a href='#' class='deg180'><img src='image.jpg'></a>
+    <a href='#' class='deg225'><img src='image.jpg'></a>
+    <a href='#' class='deg315'><img src='image.jpg'></a>
+</div>
+            
+            </div>
+        </div>
+        
+        <div id="headerCalorieSum">Kalorien, die du bis heute gegessen hast:</div>
 
         <!--    Counter    -->
 
@@ -122,10 +150,10 @@
                 <button type="button" id="addbutton" class="btn btn-default btn-lg btn-info"><i class="glyphicon glyphicon-stats"></i></button>
             </div>
             <div class="btn-group" role="group">
-                <button type="button" id="cotestbutton" class="btn btn-default btn-lg btn-info"><i class="glyphicon glyphicon-heart-empty"></i></button>
+                <button type="button" id="heartbutton" class="btn btn-default btn-lg btn-info"><i class="glyphicon glyphicon-heart-empty"></i></button>
             </div>
             <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default btn-lg btn-info"><i class="glyphicon glyphicon-cog"></i></button>
+                <button type="button" class="btn btn-default btn-lg btn-info" id="cogbutton"><i class="glyphicon glyphicon-cog"></i></button>
             </div>
         </div>
     </div>

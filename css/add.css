@@ -9,12 +9,12 @@
 }
 
 .lr {
-    margin: -10
+    margin: -10;
 }
 
 .food-list-btn {
     height: 15%;
-    font-size: 18px;
+    font-size: 200%;
     color: dimgray;
     background-color: #ecf8f2;
 }
