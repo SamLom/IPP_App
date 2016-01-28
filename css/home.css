@@ -13,15 +13,18 @@
     padding-top: 25px;
 }
 
-.my-legend {
-    margin-right: 40px;
+#info-div {
+    background-color:rgba(255, 255, 255, 0.7);
+    margin-left: 4%;
+    margin-right: 4%;
+    border-radius: 5px;
+    height: 220px;
+    margin-top: 4%;
+    
 }
 
-/*#info-cal {
-    background-color: white;
-    height: 100px;
-    width: 100px;
-} */
+#info-cal {
+}
 
 .progress {
     margin-left: 5%;
@@ -31,34 +34,10 @@
     margin-top: 1%;
 }
 
+
 .progress-bar {
     font-size: 20px;
     padding-top: 13px;
-}
-
-.my-legend .legend-scale ul {
-    margin: 0;
-    padding: 0;
-    float: left;
-    list-style: none;
-    margin-left:
-}
-
-.my-legend .legend-scale ul li {
-    display: block;
-    float: left;
-    width: 50px;
-    margin-bottom: 6px;
-    text-align: center;
-    font-size: 80%;
-    list-style: none;
-}
-
-.my-legend ul.legend-labels li span {
-    display: block;
-    float: left;
-    height: 15px;
-    width: 50px;
 }
 
 #legend {
@@ -79,13 +58,30 @@
 }
 
 #label-1 {
-    background-color: red;
+    background-color: #5cb85c;
 }
 
 #label-2 {
-    background-color: green;
+    background-color: #f0ad4e;
 }
 
 #label-3 {
-    background-color: aqua;
+    background-color: #d9534f;
+}
+
+#meals {
+    font-size: 25px;
+    text-align: center;
+    font-weight: lighter;
+    margin-top: 9%;
+    height: 260px;
+    background-color:rgba(255, 255, 255, 0.7);
+    margin-left: 3%;
+    margin-right: 3%;
+    padding-top: 5px;
+}
+
+.meal_items {
+    font-size: 26px;
+    font-weight: lighter;
 }
