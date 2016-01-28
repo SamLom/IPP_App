@@ -1,230 +1,39 @@
+body {
+    color: gray;
+    background: repeating-linear-gradient(
+  to right,
+  #ecf8ec,
+  #ecf8ec 20px,
+  #daf1da 20px,
+  #daf1da 40px
+);
+}
 
-.footer {  
-height:80px;
-position: fixed;
-left: 0;
-bottom: 0%;
-width: 100%;
-background-color:whitesmoke; }
-
-#header {
-    height: 150px;
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0%;
+    width: 100%;
+    background-color: whitesmoke;
 }
 
 .div_header {
-    padding-top: 40px;
-    font-size: 200%
+    font-size: 200%;
+    heigth: 100px;
 }
 
-#footer {
+.header {
     background-color: #40bf80;
-    height: 150px;
+    color: white;
+    text-align: center;
 }
 
 .btn-info {
     background-color: #40bf80;
 }
 
-#navBar {
-    height: 100px;
-    width: 100%;
-    position:fixed;                                         
-    bottom:0px;
-    background-color: lightgray;
-    z-index:1000000;
-}
-
-.progress-pie-chart {
-  width: 230px;
-  height: 230px;
-  border-radius: 50%;
-  background-color: #E5E5E5;
-  position: relative;
-}
-
-.progress-pie-chart.gt-50 {
-  background-color: #51c4d4;
-}
-
-.ppc-progress {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50% - 100px);
-  top: calc(50% - 100px);
-  width: 200px;
-  height: 200px;
-  clip: rect(0, 230px, 200px, 100px);
-}
-.ppc-progress .ppc-progress-fill {
-  content: "";
-  position: absolute;
-  border-radius: 60%;
-  left: calc(50% - 100px);
-  top: calc(50% - 100px);
-  width: 200px;
-  height: 200px;
-  clip: rect(0, 100px, 200px, 0);
-  background: #51c4d4;
-  transform: rotate(60deg);
-}
-.gt-50 .ppc-progress {
-  clip: rect(0, 100px, 200px, 0);
-}
-.gt-50 .ppc-progress .ppc-progress-fill {
-  clip: rect(0, 200px, 200px, 100px);
-  background: #E5E5E5;
-}
-
-.ppc-percents {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50% - 193.91304px/2);
-  top: calc(50% - 193.91304px/2);
-  width: 193.91304px;
-  height: 193.91304px;
-  background-position: center;
-  text-align: center;
-  display: table;
-}
-
-.ppc-percents span {
-  display: block;
-  font-size: 2.6em;
-  font-weight: bold;
-  color: white;
-}
-
-.pcc-percents-wrapper {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-body {
-  font-family: Arial;
-  background-color: #ecf9f2;
-}
-
-.header {
-height: 80px;
-background-color: #40bf80;
-font-size: 24px;
-color: white;
-display: block;
-text-align: center;
-line-height: 80px;
-}
-
-.counter {
-color: #40bf80;
-font-size: 36px; 
-text-align: center;
-margin-top: 20px;
-
-}
-
-.meals {
-background-color: white;
-height: 300px;
-padding: 10px;
-margin: 25px;
-border-radius: 10px;
-color: gray;
-font-size: 36px; 
-text-align: center;
-margin-top: 40px;
-font-weight: lighter;
-}
-
-::-webkit-scrollbar { 
-    display: none; 
-}
-
-.scroll {
-  white-space: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;   
-}
-
-nav {
-  width: 100%;
-}
-
-.nav-item {
-  color: black;
-}
-
-header {
-  background: white;
-}
-
-.example-one-header {
-  width: 100%;    
-  border-radius: 0px;
-}
-
-.nav-item {
-  padding: 20px 25px 20px;
-}
-
-.nav-item:not(:last-child) {
-  border-right: 0px solid rgba(114, 124, 135, 0.2);
-}
-
-
-
-body {
-  max-width: 100%;
-  color: #40bf80;
-  line-height: 1.5;
-}
-
-header, nav {
-  font-size: 0;
-}
-
-.nav-item {
-  font-size: 14px;
-}
-
-
-.nav-item,
-.vertical-align-middle {
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.title {
-  margin: 24px 0 6px;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: .2em;
-  color: #999;
-}
-
-#overview {
-display: none;
-}
-
-
-.form-control {
-    height: 50px;
-}
-
-.search {
-    height: 50px;
-    width: 75px;
-    border-radius: 0px;
-}
-
-.form-control {
-    border-radius: 0px;
-}
-
-.hfi .glyphicon {
-    font-size: 50px;
+.progr_bar {
+    height: 80px;
 }
 
 #calorieSum {
@@ -236,70 +45,41 @@ display: none;
 }
 
 #mealsDiv {
-    margin-top: 8%;
+    margin-top: 1%;
+}
+
+.counter {
+    color: #40bf80;
+    font-size: 36px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 #headerCalorieSum {
     text-align: center;
-    font-size: 200%;
+    font-size: 120%;
     margin-top: 6%;
 }
 
-.progress {
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 30%;
-}
 
-#homebutton, #overviewbutton, #addbutton, #heartbutton, #cogbutton {
-    height: 200px;
-}
 
-.btn-group .glyphicon {
-    font-size: 40px;
-    padding-bottom: 50%;
-}
-
-#plate_div {
+.meals {
+    font-size: 30px;
     text-align: center;
+    font-weight: lighter;
+    margin-top: 9%;
 }
 
-#plate {
-    height: 400px;
-    width: 400px;
-    background-color: white;
-    margin-top: 7%;
-    margin-left: 30%;
-    border-radius: 100%
-
+.meal_items {
+    font-size: 26px;
+    font-weight: lighter;
 }
 
-.img  {
+.hfi .glyphicon {
+    font-size: 33px;
+}
+
+.btn_delete {
     height: 50px;
     width: 50px;
 }
-
-.circle-container {
-    position: relative;
-    width: 24em;
-    height: 24em;
-    padding: 2.8em;
-    /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
-    border: dashed 1px;
-    border-radius: 50%;
-    margin: 1.75em auto 0;
-}
-.circle-container a {
-    display: block;
-    position: absolute;
-    top: 50%; left: 50%;
-    width: 4em; height: 4em;
-    margin: -2em;
-}
-.circle-container img { display: block; width: 100%; }
-.deg0 { transform: translate(12em); } /* 12em = half the width of the wrapper */
-.deg45 { transform: rotate(45deg) translate(12em) rotate(-45deg); }
-.deg135 { transform: rotate(135deg) translate(12em) rotate(-135deg); }
-.deg180 { transform: translate(-12em); }
-.deg225 { transform: rotate(225deg) translate(12em) rotate(-225deg); }
-.deg315 { transform: rotate(315deg) translate(12em) rotate(-315deg); }
