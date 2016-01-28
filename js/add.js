@@ -10,7 +10,7 @@
 
         function load_foodItems() {
 
-          //  alert("load_foodItems");
+          //  alert("load_foodItems!");
             //test for firefox 3.6 see if it works
             //with this way of iterating it
             // Anzahl der food items
@@ -46,6 +46,7 @@
                    $("<i>" + "</i>").attr('class', 'glyphicon glyphicon-plus').appendTo('#nnnn' + i);
                 
                 
+             
                 
                 
                 
