@@ -22,13 +22,23 @@
                 // food item wird wieder zum Array umgewandelt und in das Objekt food_items reingeschrieben (Key=Name)
                 var item = JSON.parse(localStorage.getItem(key));
                 food_items[item[0]] = [item[1], item[2], item[3], item[4], item[5], item[6], item[7], item[8], item[9], item[10]];
+
+                food_items[item[0]].push(parseInt(item[8]));  //food_items...[10] enhält Summe kcal
+                food_items[item[0]].push(parseInt(item[1])); //selected_food_items...[11] enhält Summe Menge
+                if(food_items[item[0]][0].indexOf("g") > -1){                //selected_food_items...[13] enhält g / ml
+                  food_items[item[0]].push("g")}
+                else{
+                  food_items[item[0]].push("ml")
+                }
+                food_items[item[0]].push(false);                            //selected_food_items...[13] enhält expanded true/false
+                 
                 //food_items[item[0]] = item[8];
               keys.push(item[0]);
                 $("<div></div>").attr('id', 'wrp_nnn' + i).appendTo('#abcd');
                 
                 $("<div>" + item[0] + " " + item[1] + " " + item[8] + " " + item[9] + "</div>")
                    .val(item[0]).attr('class', 'food-list-btn col-md-10 col-xs-10 btn btn-default').attr('id', 'nnn' + i).appendTo('#wrp_nnn' + i)
-                   .click(function () {button_selected($(this))  });
+                   .click(function () {show_details($(this) ,food_items[$(this).val()]); });
                 
                 $("<div>" +  "</div>")
                    .val(item[0]).attr('class', 'plus-button col-xs-2 food-list-btn btn btn-default').attr('id', 'nnnn' + i).appendTo('#wrp_nnn' + i)
@@ -57,23 +67,14 @@
               //  alert(x.val());
               if(selected_food_items[x.val()] == undefined){
                 selected_food_items[x.val()] = food_items[x.val()];
-                selected_food_items[x.val()].push(parseInt(food_items[x.val()][7])); //selected_food_items...[10] enhält Summe kcal
-                selected_food_items[x.val()].push(parseInt(food_items[x.val()][0])); //selected_food_items...[11] enhält Summe Menge
-                
-                if(selected_food_items[x.val()][0].indexOf("g") > -1){                //selected_food_items...[13] enhält g / ml
-                  selected_food_items[x.val()].push("g")}
-                else{
-                  selected_food_items[x.val()].push("ml")
-                }
-                selected_food_items[x.val()].push(false);                            //selected_food_items...[13] enhält expanded true/false
-                 
+     
                 $("<div></div>").attr('id', 'wrpdiv_'+x.val()).attr('class', 'col-xs-12 col-md-12').appendTo('#mealsDiv');
                 //$("<div>" + x.val() + " " + food_items[x.val()][0]+" "+food_items[x.val()][8]+" "+food_items[x.val()][7] + " kcal" + "</div>")
                 //  .attr('id', x.val()).appendTo('#wrpdiv_' + x.val());
 
                 $("<div>" + x.val() + " " + food_items[x.val()][0]+" "+food_items[x.val()][8]+" "+food_items[x.val()][7] + " kcal" + "</div>").val(x.val())
-                  .attr('id', x.val()).attr('class', 'col-xs-10 col-md-11 btn btn-default meal_item').appendTo('#wrpdiv_' + x.val())
-                  .click(function() {show_details($(this),selected_food_items[$(this).val()]); });
+                  .attr('id', x.val()).attr('class', 'col-xs-11 col-md-10 btn btn-default meal_item').appendTo('#wrpdiv_' + x.val())
+                  .click(function() {show_details($(this) ,selected_food_items[$(this).val()]); });
                 
 
                 $("<div>" + "</div>").attr('id', 'btn_' + x.val()).attr('class', 'div-button').val(x.val())
@@ -102,16 +103,16 @@
              d=new Date();
              today=new Date(d.getFullYear(),d.getMonth(),d.getDate());
              today_new=JSON.parse(JSON.stringify(today));
-            // alert(item['date'] + '  '  + today_new);
+             alert(item['date'] + '  '  + today_new);
              if(item['date'] == today_new) {
-             //  alert('heuties Datum gefunden');
+               alert('heuties Datum gefunden');
                item['volume'] += food_items[x.val()[7]];
-             //  alert('item gefunden');
+               alert('item gefunden');
              } 
              else{
                key = "$fap_wkci" + (parseInt(nr_wkci_items)+1).toString() + "$"; 
                localStorage.setItem('$fap_nowkcis$',JSON.stringify(parseInt(nr_wkci_items)+1));
-             //  alert(key);
+               alert(key);
                chartData_new = {
                  date: today,
                  //volume: parseInt(food_items[x.val()][7]);
@@ -133,14 +134,14 @@
 
 
 // Funktion show details of food item
-function show_details(x,elected_food_item) {
-  //alert("details");
+function show_details(x, elected_food_item) {
+  //alert(x.attr("id"));
   if (elected_food_item[13]) {
-    $("#"+x.val()).html(x.val() + " " + elected_food_item[11]+elected_food_item[12]+" "+ elected_food_item[10] + " kcal");
+    $("#"+x.attr("id")).html(x.val() + " " + elected_food_item[11]+elected_food_item[12]+" "+ elected_food_item[10] + " kcal");
     elected_food_item[13] = false;
   }
   else{
-    $("#"+x.val()).html(x.val() + " " + elected_food_item[11]+elected_food_item[12]+" "+ elected_food_item[10] + " kcal" 
+    $("#"+x.attr("id")).html(x.val() + " " + elected_food_item[11]+elected_food_item[12]+" "+ elected_food_item[10] + " kcal" 
       +"</br> Eiweiss: "+ elected_food_item[1]
       +" Fett: "+ elected_food_item[2]
       +" Kohlehydrate: "+ elected_food_item[3]
