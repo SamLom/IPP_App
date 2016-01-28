@@ -60,7 +60,7 @@
           alert("add_food_item");
         };
 
-// Funktion Button selected
+// Funktion Button selected!
 
 
             function button_selected(x) {
