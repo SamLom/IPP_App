@@ -54,14 +54,20 @@
 
         <div id="info-cal">
             <div id="headerCalorieSum">Kalorien, die du heute gegessen hast:</div>
-            <div id="calorieSum" class="counter">0 kcal</div>
+            <div id="calorieSum" class="counter">0 kcal/2000 kcal</div>
 
         </div>
 
         <!--    Bars   ----------------------------- -->
+<div class="progress" id="abs_prg">
 
+  <div id="kcal_abs_prgs_bar" class="progress-bar progress-bar-info" role="progressbar" style="width:0%"><a id="hallo">kcal</a>
+    
+  </div>
 
- <div class="progress">
+</div>
+
+ <div  id="rel_prg" class="progress">
   <div id="klhd_prgs_bar" class="progress-bar progress-bar-success" style="width: 0%">
     <span class="sr-only">35% Complete (success)</span>
   </div>
@@ -72,6 +78,8 @@
     <span class="sr-only">10% Complete (danger)</span>
   </div>
 </div>
+
+ 
         
         <!----   Legende --------------------------------------->
             
@@ -98,6 +106,7 @@
         <div id="mealsDiv" class="meal_items"></div>
         </div>
         
+        
 
     </section>
 
@@ -113,7 +122,7 @@
         <div id="header" class="header">
             <div class="div_header">HINZUFÜGEN</div>
         </div>
-        s
+        
         <div id="searchBar_div" class="input-group custom-search-form">
             <input id="search_bar" type="text" class="form-control col-xs-10">
             <span class="input-group-btn">

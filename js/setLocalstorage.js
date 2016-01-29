@@ -485,7 +485,7 @@ localStorage.setItem("$fap_fi478$", JSON.stringify(["Zwiebel", "100g", "1.0g", "
 localStorage.setItem("$fap_fi479$", JSON.stringify(["Zwiebelmettwurst", "100g", "15.0g", "25.0g", "0.0g", "0.0g", "0.0g", "0.0g", "285", "kcal", "2.9"]));
 localStorage.setItem("$fap_nofis$", JSON.stringify(480));
 
-alert("foodItems");
+//alert("foodItems");
 }
 
 
@@ -493,7 +493,7 @@ function init_localStor_chartData() {
     
     var chartData=[];
     
-     alert("chartData");
+     //alert("chartData");
     d=new Date();
     y= d.getFullYear();
     mon= d.getMonth();

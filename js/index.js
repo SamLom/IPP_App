@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $("#overview").hide();
-    $("#add").hide(); 
+    $("#add").hide();
+    $("#rel_prg").hide(); 
     init_localStor_foodItems();
     init_localStor_chartData();
     load_foodItems();
@@ -13,16 +14,20 @@ $(document).ready(function(){
         $("#home").hide();
         $("#overview").show();
         $("#add").hide();
+
     });
     $("#homebutton").click(function(){
         $("#home").show();
         $("#overview").hide();
         $("#add").hide();
+        calc_progress_bar();
+        
     });
     $("#addbutton").click(function(){
         $("#add").show();
         $("#overview").hide();
         $("#home").hide();
+        
     });
 });
 

@@ -33,14 +33,14 @@
                  
                 //food_items[item[0]] = item[8];
               keys.push(item[0]);
-                $("<div></div>").attr('id', 'wrp_nnn' + i).appendTo('#abcd');
+                $("<div></div>").attr('id', 'wrp_nnnn' + i).appendTo('#abcd');
                 
                 $("<div>" + item[0] + " " + item[1] + " " + item[8] + " " + item[9] + "</div>")
-                   .val(item[0]).attr('class', 'food-list-btn col-md-10 col-xs-10 btn btn-default').attr('id', 'nnn' + i).appendTo('#wrp_nnn' + i)
+                   .val(item[0]).attr('class', 'food-list-btn col-md-10 col-xs-10 btn btn-default').attr('id', 'd_nnnn' + i).appendTo('#wrp_nnnn' + i)
                    .click(function () {show_details($(this) ,food_items[$(this).val()]); });
                 
                 $("<div>" +  "</div>")
-                   .val(item[0]).attr('class', 'plus-button col-xs-2 food-list-btn btn btn-default').attr('id', 'nnnn' + i).appendTo('#wrp_nnn' + i)
+                   .val(item[0]).attr('class', 'plus-button col-xs-2 food-list-btn btn btn-default').attr('id', 'nnnn' + i).appendTo('#wrp_nnnn' + i)
                    .click(function () {button_selected($(this))  });
                    $("<i>" + "</i>").attr('class', 'glyphicon glyphicon-plus').appendTo('#nnnn' + i);
                 
@@ -55,9 +55,7 @@
 
         };
 
-         function add_food_item(x) {
-          alert("add_food_item");
-        };
+        
 
 // Funktion Button selected!
 
@@ -66,14 +64,22 @@
               //  alert(x.text() + " hinzugefügt");
               //  alert(x.val());
               if(selected_food_items[x.val()] == undefined){
-                selected_food_items[x.val()] = food_items[x.val()];
+                var tmp=[];
+                tmp = food_items[x.val()];
+                selected_food_items[x.val()]=[];  
+                for(ix=0;ix<tmp.length;ix++){  
+                  selected_food_items[x.val()].push(tmp[ix]);
+                }
+                selected_food_items[x.val()][10] = parseInt(food_items[x.val()][7]);
+                selected_food_items[x.val()][11] = parseInt(food_items[x.val()][0]);
+                selected_food_items[x.val()][13] = false;
      
                 $("<div></div>").attr('id', 'wrpdiv_'+x.val()).attr('class', 'col-xs-12 col-md-12').appendTo('#mealsDiv');
                 //$("<div>" + x.val() + " " + food_items[x.val()][0]+" "+food_items[x.val()][8]+" "+food_items[x.val()][7] + " kcal" + "</div>")
                 //  .attr('id', x.val()).appendTo('#wrpdiv_' + x.val());
 
                 $("<div>" + x.val() + " " + food_items[x.val()][0]+" "+food_items[x.val()][8]+" "+food_items[x.val()][7] + " kcal" + "</div>").val(x.val())
-                  .attr('id', x.val()).attr('class', 'col-xs-11 col-md-10 btn btn-default meal_item').appendTo('#wrpdiv_' + x.val())
+                  .attr('id', x.val()).attr('class', 'col-xs-10 col-md-10 btn btn-default meal_item').appendTo('#wrpdiv_' + x.val())
                   .click(function() {show_details($(this) ,selected_food_items[$(this).val()]); });
                 
 
@@ -85,8 +91,8 @@
               }
               else {
                 selected_food_items[x.val()][10] += parseInt(food_items[x.val()][7]);
-                selected_food_items[x.val()][11] += parseInt(food_items[x.val()][0])
-                $("#"+x.val()).text(x.val() + " " + selected_food_items[x.val()][11]+food_items[x.val()][12]+" "+ selected_food_items[x.val()][10] + " kcal");
+                selected_food_items[x.val()][11] += parseInt(food_items[x.val()][0]);
+                $("#"+x.val()).text(x.val() + " " + selected_food_items[x.val()][11]+selected_food_items[x.val()][12]+" "+ selected_food_items[x.val()][10] + " kcal");
                  //$("#"+x.val()).text("teste");
              } 
              var tmp_cals = 0;
@@ -94,7 +100,7 @@
                tmp_cals += selected_food_items[food_name][10];
              }
              calories = tmp_cals;
-             $('#calorieSum').text(calories.toString() + " kcal");
+             $('#calorieSum').text(calories.toString() + " kcal von 2000 kcal");
   
                 // actualize char data
              var nr_wkci_items = localStorage.getItem('$fap_nowkcis$');
@@ -103,16 +109,16 @@
              d=new Date();
              today=new Date(d.getFullYear(),d.getMonth(),d.getDate());
              today_new=JSON.parse(JSON.stringify(today));
-             alert(item['date'] + '  '  + today_new);
+             //alert(item['date'] + '  '  + today_new);
              if(item['date'] == today_new) {
-               alert('heuties Datum gefunden');
+               //alert('heuties Datum gefunden');
                item['volume'] += food_items[x.val()[7]];
-               alert('item gefunden');
+               //alert('item gefunden');
              } 
              else{
                key = "$fap_wkci" + (parseInt(nr_wkci_items)+1).toString() + "$"; 
                localStorage.setItem('$fap_nowkcis$',JSON.stringify(parseInt(nr_wkci_items)+1));
-               alert(key);
+               //alert(key);
                chartData_new = {
                  date: today,
                  //volume: parseInt(food_items[x.val()][7]);
@@ -128,7 +134,13 @@
                .val(item[0]).attr('class', 'alert alert-sucess').attr('id', 'add_alert').appendTo('#wrp_nnn')
                .click(function () {button_selected($(this))  });
 
-            calc_progress_bar();
+            //calc_progress_bar();
+            //<div class="alert alert-info fade in">
+            // <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+            //</div>
+            $("<div>" + "added!" +  "</div>").attr('class', 'info-added').attr('id', 'alert_' + x.val()).hide().fadeIn(200).fadeOut(2000)
+            .appendTo("#d_"+x.attr("id"));
+                
          };
 
 
