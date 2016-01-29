@@ -50,7 +50,7 @@ function calc_progress_bar() {
          empty_part = 100 - kcal_prgs;
     }
     else{
-      $("#rel_prg").hide();
+     // $("#rel_prg").hide();
     }
    //  alert("before set width");
      $("#klhd_prgs_bar").width(rel_kohlenhydrate+"%") ;

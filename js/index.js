@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $("#overview").hide();
     $("#add").hide();
-    $("#rel_prg").hide(); 
+   // $("#rel_prg").hide(); 
     init_localStor_foodItems();
     init_localStor_chartData();
     load_foodItems();

@@ -18,13 +18,14 @@
     margin-left: 4%;
     margin-right: 4%;
     border-radius: 5px;
-    height: 220px;
+    height: 250px;
     margin-top: 4%;
     
 }
 
 #hallo {
-    color: gray;
+    color: white;
+    padding-left: 10px;
 }
 
 
