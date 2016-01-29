@@ -4,11 +4,7 @@
         var keys =[];
         var nr_food_items;
 
-        $(document).ready(function () {
-            init_localStor_foodItems();
-            init_localStor_chartData()
-            
-        });
+       
 
         function load_foodItems() {
 

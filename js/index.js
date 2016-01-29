@@ -1,6 +1,8 @@
 $(document).ready(function(){
     $("#overview").hide();
-    $("#add").hide();
+    $("#add").hide(); 
+    init_localStor_foodItems();
+    init_localStor_chartData();
     load_foodItems();
     //setze höhe des scrollable divs der food item liste in der add section
     var wh = $(window).height();
