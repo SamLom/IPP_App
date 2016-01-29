@@ -1,14 +1,11 @@
-$( document ).ready(function() {
- init_localStor_chartData();
-     init_locStor_foodItems();
-}); 
 
-function init_locStor_foodItems(){  
+function init_localStor_foodItems(){  
     
    // alert("foodItems");
 
 //Lebensmittel, Menge ,Eiweiß, Fett,Kohlenhydrate, davon Zucker, Ballaststoffe, Alkohol,  Kalorien, Energiedichte      
 localStorage.setItem("$fap_fi1$", JSON.stringify(["Aal", "100g", "14.0g", "23.0g", "0.0g", "0.0g", "0.0g", "0.0g", "263", "kcal", "2.6"]));
+localStorage.setItem("$fap_fi2$", JSON.stringify(["Absinth", "100ml", "0.0g", "0.0g", "30.0g", "0.0g", "0.0g", "0.0g", "250", "kcal", "2.0"]));
 localStorage.setItem("$fap_fi3$", JSON.stringify(["Acai", "100g", "5.0g", "19.0g", "4.0g", "2.0g", "0.0g", "0.0g", "207", "kcal", "2.1"]));
 localStorage.setItem("$fap_fi4$", JSON.stringify(["Acerola", "100g", "0.0g", "0.0g", "3.5g", "3.5g", "2.0g", "0.0g", "18", "kcal", "0.2"]));
 localStorage.setItem("$fap_fi5$", JSON.stringify(["Ackerbohnen", "100g", "8.0g", "0.6g", "18.0g", "9.0g", "9.0g", "0.0g", "127", "kcal", "1.3"]));
@@ -488,7 +485,7 @@ localStorage.setItem("$fap_fi478$", JSON.stringify(["Zwiebel", "100g", "1.0g", "
 localStorage.setItem("$fap_fi479$", JSON.stringify(["Zwiebelmettwurst", "100g", "15.0g", "25.0g", "0.0g", "0.0g", "0.0g", "0.0g", "285", "kcal", "2.9"]));
 localStorage.setItem("$fap_nofis$", JSON.stringify(480));
 
-
+alert("foodItems");
 }
 
 

@@ -5,7 +5,9 @@
         var nr_food_items;
 
         $(document).ready(function () {
-            load_foodItems();
+            init_localStor_foodItems();
+            init_localStor_chartData()
+            
         });
 
         function load_foodItems() {
@@ -21,6 +23,7 @@
               //  console.log(key);
                 // food item wird wieder zum Array umgewandelt und in das Objekt food_items reingeschrieben (Key=Name)
                 var item = JSON.parse(localStorage.getItem(key));
+                alert(item[0]);
                 food_items[item[0]] = [item[1], item[2], item[3], item[4], item[5], item[6], item[7], item[8], item[9], item[10]];
 
                 food_items[item[0]].push(parseInt(item[8]));  //food_items...[10] enhält Summe kcal

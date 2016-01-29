@@ -1,10 +1,8 @@
-
-
 $(document).ready(function(){
     $("#overview").hide();
     $("#add").hide();
-    alert("show/hide");
-    //seze höhe des scrollable divs der food item liste in der add section
+    load_foodItems();
+    //setze hÃ¶he des scrollable divs der food item liste in der add section
     var wh = $(window).height();
     var fisheigh  = Math.round(wh-wh/4)
     $("#abcd").height(fisheigh);
