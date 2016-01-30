@@ -9,26 +9,28 @@
 {
     font-size:12px;
     font-family:verdana,helvetica,arial,sans-serif;
-    background-color: red;
+    background-color: whitesmoke;;
 }
 
 .amChartsButtonSelected
 {
-   background-color:green;
+   background-color:white;
    border-style:solid;
-   border-color:#CC0000;
+   border-color:#5bc0de;
    border-width:1px;
-   color:red<;
+   color:black;
    -moz-border-radius: 5px;
    border-radius: 5px;
    margin: 1px;
    outline: none;
    box-sizing: border-box;
+     height: 25px;
+    width: 80px;
 }
 
 .amChartsButton
 {
-    color: #000000;
+    color: gray;
     background: transparent;
     opacity: 0.7;
     border: 1px solid rgba(0, 0, 0, .3);
@@ -37,7 +39,9 @@
    margin: 1px;
    outline: none;
    box-sizing: border-box;
-    background-color: red;
+    background-color: papayawhip;
+    height: 25px;
+    width: 80px;
 }
 
 .amChartsCompareList
