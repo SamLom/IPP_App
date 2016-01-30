@@ -138,7 +138,7 @@
             //<div class="alert alert-info fade in">
             // <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
             //</div>
-            $("<div>" + "added!" +  "</div>").attr('class', 'info-added').attr('id', 'alert_' + x.val()).hide().fadeIn(200).fadeOut(2000)
+            $("<div>" + "hinzugefügt!" +  "</div>").attr('class', 'info-added').attr('id', 'alert_' + x.val()).hide().fadeIn(20).delay(2000).fadeOut(2000)
             .appendTo("#d_"+x.attr("id"));
                 
          };
