@@ -118,16 +118,16 @@
 				}, {
 	        period: "MM",
 	        count: 1,
-	        label: "1 Monate"
+	        label: "1 Monat"
 				}, {
 	        period: "MM",
 	        count: 6,
-	        label: "6 Monat"
+	        label: "6 Monate"
 				}, {
-	        period: "YYYY",
+	      /*  period: "YYYY",
 	        count: 1,
 	        label: "1 Jahr"
-				}, {
+				}, { */
 	        period: "MAX",
 	        label: "MAX"
 				}];
