@@ -32,4 +32,5 @@
 .info-added {
     color: #5bc0de;
     font-weight: bold;
+    padding-left: 0px; 
 }

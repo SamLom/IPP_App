@@ -36,7 +36,7 @@
                 $("<div></div>").attr('id', 'wrp_nnnn' + i).appendTo('#abcd');
                 
                 $("<div>" + item[0] + " " + item[1] + " " + item[8] + " " + item[9] + "</div>")
-                   .val(item[0]).attr('class', 'food-list-btn col-md-10 col-xs-9 btn btn-default').attr('id', 'd_nnnn' + i).appendTo('#wrp_nnnn' + i)
+                   .val(item[0]).attr('class', 'food-list-btn col-md-9 col-xs-9 btn btn-default').attr('id', 'd_nnnn' + i).appendTo('#wrp_nnnn' + i)
                    .click(function () {show_details($(this) ,food_items[$(this).val()]); });
                 
                 $("<div>" +  "</div>")
@@ -94,7 +94,7 @@
                tmp_cals += selected_food_items[food_name][10];
              }
              calories = tmp_cals;
-             $('#calorieSum').text(calories.toString() + " kcal von 2000 kcal");
+             $('#calorieSum').text(calories.toString() + " kcal/2000 kcal");
   
                 // actualize char data
              var nr_wkci_items = localStorage.getItem('$fap_nowkcis$');

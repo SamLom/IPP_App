@@ -4,7 +4,7 @@ function remove_food_item(rm_but) {
    // alert($(rm_but).val());
     console.log(selected_food_items[$(rm_but).val()]);
     calories -= selected_food_items[$(rm_but).val()][10];
-    $('#calorieSum').text(calories.toString() + " kcal von 2000 kcal");
+    $('#calorieSum').text(calories.toString() + " kcal/2000 kcal");
     
     delete selected_food_items[$(rm_but).val()];
     calc_progress_bar();
