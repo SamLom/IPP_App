@@ -123,8 +123,6 @@
         <div id="header" class="header">
             <div class="div_header">HINZUFÜGEN</div>
         </div>
-
-        <button id="opener">Open Dialog</button>
         
         <div id="searchBar_div" class="input-group custom-search-form">
             <input id="search_bar" type="text" class="form-control col-xs-10">
@@ -162,9 +160,7 @@
   <!--    Dialog Popup --------------------------------------------------  -->
 
 
-  <div id="dialog" title="Details:">
-    
-  </div>
+  <div id="dialog" title="Details:"></div>
 
 
     <!--     Tab Bar        -->
@@ -217,12 +213,21 @@
       },
       hide: {
         effect: "explode",
-        duration: 500
+        duration: 1000
       },
             buttons: {
         "Hinzufügen": function() {
-            //alert(food_add_button.attr("id"));
+            //alert(food_add_button.val());
+            //alert($("#menge").val());
+            menge = parseInt($("#menge").val());
+            food_items[food_add_button.val()][14] = menge;
+            food_items[food_add_button.val()][15] = Math.round(menge / parseInt(food_items[food_add_button.val()][0])
+               * parseInt(food_items[food_add_button.val()][7]));
+            //alert(food_items[food_add_button.val()][15]);
             button_selected(food_add_button);
+            $("#menge" ).val(food_items[food_add_button.val()][0]);
+            food_items[food_add_button.val()][14] = food_items[food_add_button.val()][0];
+            food_items[food_add_button.val()][15] = food_items[food_add_button.val()][7];
             $("<div>" + "hinzugefügt!" +  "</div>").attr('class', 'info-added').hide().fadeIn(20).delay(2000).fadeOut(2000)
             .appendTo("#dialog");
           $( this ).dialog( "close" );
