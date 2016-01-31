@@ -225,9 +225,9 @@
                * parseInt(food_items[food_add_button.val()][7]));
             //alert(food_items[food_add_button.val()][15]);
             button_selected(food_add_button);
-            $("#menge" ).val(food_items[food_add_button.val()][0]);
-            food_items[food_add_button.val()][14] = food_items[food_add_button.val()][0];
-            food_items[food_add_button.val()][15] = food_items[food_add_button.val()][7];
+            $("#menge" ).val(parseInt(food_items[food_add_button.val()][0]));
+            food_items[food_add_button.val()][14] = parseInt(food_items[food_add_button.val()][0]);
+            food_items[food_add_button.val()][15] = parseInt(food_items[food_add_button.val()][7]);
             $("<div>" + "hinzugefügt!" +  "</div>").attr('class', 'info-added').hide().fadeIn(20).delay(2000).fadeOut(2000)
             .appendTo("#dialog");
           $( this ).dialog( "close" );

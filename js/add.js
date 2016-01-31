@@ -72,15 +72,16 @@
                 for(ix=0;ix<tmp.length;ix++){  
                   selected_food_items[x.val()].push(tmp[ix]);
                 }
-                selected_food_items[x.val()][10] = parseInt(food_items[x.val()][7]);
-                selected_food_items[x.val()][11] = parseInt(food_items[x.val()][0]);
+                selected_food_items[x.val()][10] = parseInt(food_items[x.val()][15]);
+                selected_food_items[x.val()][11] = parseInt(food_items[x.val()][14]);
                 selected_food_items[x.val()][13] = false;
      
                 $("<div></div>").attr('id', 'wrpdiv_'+x.val()).attr('class', 'col-xs-12 col-md-12').appendTo('#mealsDiv');
                 //$("<div>" + x.val() + " " + food_items[x.val()][0]+" "+food_items[x.val()][8]+" "+food_items[x.val()][7] + " kcal" + "</div>")
                 //  .attr('id', x.val()).appendTo('#wrpdiv_' + x.val());
 
-                $("<div>" + x.val() + " " + food_items[x.val()][0]+" "+food_items[x.val()][8]+" "+food_items[x.val()][7] + " kcal" + "</div>").val(x.val())
+                $("<div>" + x.val() + " " + selected_food_items[x.val()][11]+" "+ selected_food_items[x.val()][12]+" "
+                  + selected_food_items[x.val()][10] + " kcal" + "</div>").val(x.val())
                   .attr('id', x.val()).attr('class', 'col-xs-10 col-md-10 btn btn-default meal_item').appendTo('#wrpdiv_' + x.val())
                   .click(function() {show_details($(this) ,selected_food_items[$(this).val()]); });
                 
@@ -157,7 +158,7 @@ $("#dialog").html(x.val() + " " + elected_food_item[11]+elected_food_item[12]+" 
       +" Balaststoffe: "+ elected_food_item[1]
       +" kcal: "+ elected_food_item[7]);
  $("</br><label for=\"name\">Menge</label>").attr('class', 'info-added').appendTo("#dialog");
-$("<input type=\"text\" name=\"menge\" value=" + elected_food_item[14] + ">").attr('id','menge').appendTo("#dialog");
+$("<input type=\"text\" name=\"menge\" value=" + parseInt(elected_food_item[14]) + ">").attr('id','menge').appendTo("#dialog");
 
 };
 
