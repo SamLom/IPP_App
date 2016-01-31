@@ -29,6 +29,7 @@ $(document).ready(function(){
         $("#home").hide();
         
     });
+    
 });
 
 $( window ).resize(function() {

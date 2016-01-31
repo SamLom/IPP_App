@@ -185,3 +185,4 @@ function show_details(x, elected_food_item) {
 
          }
         });
+        

@@ -28,11 +28,7 @@ function calc_progress_bar() {
   var  kcal_prgs = 0;
     var tmp_cals = 0;
      for(food_name in selected_food_items){
-        //alert(food_name);
-        //$("#klhd_prgs_bar").width("70%") ;
-       //<div id="klhd_prgs_bar" class="progress-bar progress-bar-success" style="width: 35%">Kohlenhydrate  3
-        //<div id="pro_prgs_bar" class="progress-bar progress-bar-warning" style="width: 20%">Eiweiss   1
-        //<div id="fett_prgs_bar" class="progress-bar progress-bar-danger" style="width: 10%">Fett 2
+
         eiweiss += parseInt(selected_food_items[food_name][1]);
         fett += parseInt(selected_food_items[food_name][2]);
         kohlenhydrate += parseInt(selected_food_items[food_name][3]);
