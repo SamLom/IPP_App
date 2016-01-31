@@ -152,12 +152,13 @@ function show_details(x, elected_food_item) {
   food_add_button = x;
 $("#dialog" ).dialog( "open",x );
 $("#dialog").html(x.val() + " " + elected_food_item[11]+elected_food_item[12]+" "+ elected_food_item[10] + " kcal" 
-      +"</br> Eiweiss: "+ elected_food_item[1]
-      +" Fett: "+ elected_food_item[2]
-      +" Kohlehydrate: "+ elected_food_item[3]
-      +" Balaststoffe: "+ elected_food_item[1]
-      +" kcal: "+ elected_food_item[7]);
- $("</br><label for=\"name\">Menge</label>").attr('class', 'info-added').appendTo("#dialog");
+      +"</br> 100g enthalten:"
+      +"</br> Eiweiss:"+ elected_food_item[1]
+      +", Fett:"+ elected_food_item[2]
+      +", Kohlehydrate:"+ elected_food_item[3]
+      +", Balaststoffe:"+ elected_food_item[1]
+      +", kcal:"+ elected_food_item[7]);
+ $("</br><label for=\"name\">Menge</label>").attr('class', 'info-added').attr('id','menge_label').appendTo("#dialog");
 $("<input type=\"text\" name=\"menge\" value=" + parseInt(elected_food_item[14]) + ">").attr('id','menge').appendTo("#dialog");
 
 };
