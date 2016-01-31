@@ -3,6 +3,7 @@
         var calories = 0;
         var keys =[];
         var nr_food_items;
+        var food_add_button;
 
        
 
@@ -123,10 +124,7 @@
                 createStockChart();
                    
             };
-                
-            $("<div> bsbsbsbs</div>")
-               .val(item[0]).attr('class', 'alert alert-sucess').attr('id', 'add_alert').appendTo('#wrp_nnn')
-               .click(function () {button_selected($(this))  });
+
 
             //calc_progress_bar();
             //<div class="alert alert-info fade in">
@@ -141,6 +139,24 @@
 
 // Funktion show details of food item
 function show_details(x, elected_food_item) {
+  //alert(x.attr("id"));
+  food_add_button = x;
+$("#dialog" ).dialog( "open",x );
+$("#dialog").html(x.val() + " " + elected_food_item[11]+elected_food_item[12]+" "+ elected_food_item[10] + " kcal" 
+      +"</br> Eiweiss: "+ elected_food_item[1]
+      +" Fett: "+ elected_food_item[2]
+      +" Kohlehydrate: "+ elected_food_item[3]
+      +" Balaststoffe: "+ elected_food_item[1]
+      +" kcal: "+ elected_food_item[7]);
+//<input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
+//<label for="password">Password</label>
+
+//$("#dialog_details").appendTo($("#dialog"));
+};
+
+
+// Funktion show details of food item
+function show_details_old(x, elected_food_item) {
   //alert(x.attr("id"));
   if (elected_food_item[13]) {
     $("#"+x.attr("id")).html(x.val() + " " + elected_food_item[11]+elected_food_item[12]+" "+ elected_food_item[10] + " kcal");

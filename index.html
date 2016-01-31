@@ -123,7 +123,7 @@
         <div id="header" class="header">
             <div class="div_header">HINZUFÜGEN</div>
         </div>
-        
+
         <button id="opener">Open Dialog</button>
         
         <div id="searchBar_div" class="input-group custom-search-form">
@@ -162,10 +162,8 @@
   <!--    Dialog Popup --------------------------------------------------  -->
 
 
-  <div id="dialog" title="Basic dialog">
-    <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
-    <label for="name">Menge</label>
-    <input type="text" name="name" id="name" value="100" class="text ui-widget-content ui-corner-all">
+  <div id="dialog" title="Details:">
+    
   </div>
 
 
@@ -219,10 +217,14 @@
       },
       hide: {
         effect: "explode",
-        duration: 1000
+        duration: 500
       },
             buttons: {
         "Hinzufügen": function() {
+            //alert(food_add_button.attr("id"));
+            button_selected(food_add_button);
+            $("<div>" + "hinzugefügt!" +  "</div>").attr('class', 'info-added').hide().fadeIn(20).delay(2000).fadeOut(2000)
+            .appendTo("#dialog");
           $( this ).dialog( "close" );
         },
         Cancel: function() {
