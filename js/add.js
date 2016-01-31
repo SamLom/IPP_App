@@ -25,15 +25,20 @@
 
                 food_items[item[0]].push(parseInt(item[8]));  //food_items...[10] enhält Summe kcal
                 food_items[item[0]].push(parseInt(item[1])); //selected_food_items...[11] enhält Summe Menge
-                if(food_items[item[0]][0].indexOf("g") > -1){                //selected_food_items...[13] enhält g / ml
+                if(food_items[item[0]][0].indexOf("g") > -1){                //selected_food_items...[12] enhält g / ml
                   food_items[item[0]].push("g")}
                 else{
                   food_items[item[0]].push("ml")
                 }
                 food_items[item[0]].push(false);                            //selected_food_items...[13] enhält expanded true/false
-                 
-                //food_items[item[0]] = item[8];
-              keys.push(item[0]);
+                food_items[item[0]].push(parseInt(item[1]));  // selected_food_items...[14]    hier steht die Input Menge aus Deteils
+                food_items[item[0]].push(parseInt(item[8]));  // selected_food_items...[15]    hier steht der zur Menge passende kcal Wert
+                
+                //Lebensmittel[key], Menge[0] ,Eiweiß[1], Fett[2],Kohlenhydrate[3], davon Zucker[4], Ballaststoffe[5], Alkohol[6], 
+                // Kalorien[7], "kcal"[8], Energiedichte[9],,,, Summe kcal[10], Summe Menge [11], g/ml [12] , true/false [13], 
+                // Menge  aus Details [14], kcal aus berechneter Menge aus Details [15]
+              
+                keys.push(item[0]);
                 $("<div></div>").attr('id', 'wrp_nnnn' + i).appendTo('#abcd');
                 
                 $("<div>" + item[0] + " " + item[1] + " " + item[8] + " " + item[9] + "</div>")
@@ -56,9 +61,11 @@
 
 
             function button_selected(x) {
-              //  alert(x.text() + " hinzugefügt");
-              //  alert(x.val());
-              if(selected_food_items[x.val()] == undefined){
+                //Lebensmittel[key], Menge[0] ,Eiweiß[1], Fett[2],Kohlenhydrate[3], davon Zucker[4], Ballaststoffe[5], Alkohol[6], 
+                // Kalorien[7], "kcal"[8], Energiedichte[9],,,, Summe kcal[10], Summe Menge [11], g/ml [12] , true/false [13], 
+                // Menge  aus Details [14], kcal aus berechneter Menge aus Details [15]
+         
+               if(selected_food_items[x.val()] == undefined){
                 var tmp=[];
                 tmp = food_items[x.val()];
                 selected_food_items[x.val()]=[];  
@@ -85,10 +92,11 @@
 
               }
               else {
-                selected_food_items[x.val()][10] += parseInt(food_items[x.val()][7]);
-                selected_food_items[x.val()][11] += parseInt(food_items[x.val()][0]);
-                $("#"+x.val()).text(x.val() + " " + selected_food_items[x.val()][11]+selected_food_items[x.val()][12]+" "+ selected_food_items[x.val()][10] + " kcal");
-                 //$("#"+x.val()).text("teste");
+                selected_food_items[x.val()][10] += parseInt(food_items[x.val()][15]);
+                selected_food_items[x.val()][11] += parseInt(food_items[x.val()][14]);
+                $("#"+x.val()).text(x.val() + " " + selected_food_items[x.val()][11]+selected_food_items[x.val()][12]+" "+ selected_food_items[x.val()][10] 
+                  + " kcal");
+                 
              } 
              var tmp_cals = 0;
              for(food_name in selected_food_items){
@@ -148,10 +156,9 @@ $("#dialog").html(x.val() + " " + elected_food_item[11]+elected_food_item[12]+" 
       +" Kohlehydrate: "+ elected_food_item[3]
       +" Balaststoffe: "+ elected_food_item[1]
       +" kcal: "+ elected_food_item[7]);
-//<input type="text" name="email" id="email" value="jane@smith.com" class="text ui-widget-content ui-corner-all">
-//<label for="password">Password</label>
+ $("</br><label for=\"name\">Menge</label>").attr('class', 'info-added').appendTo("#dialog");
+$("<input type=\"text\" name=\"menge\" value=" + elected_food_item[14] + ">").attr('id','menge').appendTo("#dialog");
 
-//$("#dialog_details").appendTo($("#dialog"));
 };
 
 

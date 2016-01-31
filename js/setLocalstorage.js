@@ -3,7 +3,7 @@ function init_localStor_foodItems(){
     
    // alert("foodItems");
 
-//Lebensmittel, Menge ,Eiweiß, Fett,Kohlenhydrate, davon Zucker, Ballaststoffe, Alkohol,  Kalorien, Energiedichte      
+//Lebensmittel, Menge ,Eiweiß, Fett,Kohlenhydrate, davon Zucker, Ballaststoffe, Alkohol,  Kalorien, "kcal", Energiedichte      
 localStorage.setItem("$fap_fi1$", JSON.stringify(["Aal", "100g", "14.0g", "23.0g", "0.0g", "0.0g", "0.0g", "0.0g", "263", "kcal", "2.6"]));
 localStorage.setItem("$fap_fi2$", JSON.stringify(["Absinth", "100ml", "0.0g", "0.0g", "30.0g", "0.0g", "0.0g", "0.0g", "250", "kcal", "2.0"]));
 localStorage.setItem("$fap_fi3$", JSON.stringify(["Acai", "100g", "5.0g", "19.0g", "4.0g", "2.0g", "0.0g", "0.0g", "207", "kcal", "2.1"]));
