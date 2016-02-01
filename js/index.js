@@ -30,6 +30,16 @@ $(document).ready(function(){
         
     });
     
+    
+    $("#heartbutton").click(function(){
+        alert("Diese Seite ist leider noch nicht implementiert");
+        
+    });
+    
+    $("#cogbutton").click(function(){
+        alert("Diese Seite ist leider noch nicht implementiert");
+        
+    });
 });
 
 $( window ).resize(function() {
@@ -76,5 +86,5 @@ $( window ).resize(function() {
       $( "#dialog" ).dialog( "open" );
     });
   });
-
+ 
 
