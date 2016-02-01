@@ -36,3 +36,45 @@ $( window ).resize(function() {
   console.log( $(window).height() );
   console.log( $(document).height() );
 });
+
+  $(function() {
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "blind",
+        duration: 1000
+      },
+      hide: {
+        effect: "explode",
+        duration: 1000
+      },
+            buttons: {
+        "Hinzufügen": function() {
+            //alert(food_add_button.val());
+            //alert($("#menge").val());
+            menge = parseInt($("#menge").val());
+            food_items[food_add_button.val()][14] = menge;
+            food_items[food_add_button.val()][15] = Math.round(menge / parseInt(food_items[food_add_button.val()][0])
+               * parseInt(food_items[food_add_button.val()][7]));
+            //alert(food_items[food_add_button.val()][15]);
+            button_selected(food_add_button);
+            $("#menge" ).val(parseInt(food_items[food_add_button.val()][0]));
+            food_items[food_add_button.val()][14] = parseInt(food_items[food_add_button.val()][0]);
+            food_items[food_add_button.val()][15] = parseInt(food_items[food_add_button.val()][7]);
+            $("<div>" + "hinzugefügt!" +  "</div>").attr('class', 'info-added').hide().fadeIn(20).delay(2000).fadeOut(2000)
+            .appendTo("#dialog");
+          $( this ).dialog( "close" );
+        },
+        Cancel: function() {
+          $( this ).dialog( "close" );
+        }
+      },
+      input:{}
+    });
+ 
+    $( "#opener" ).click(function() {
+      $( "#dialog" ).dialog( "open" );
+    });
+  });
+
+
