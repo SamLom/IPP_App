@@ -1,3 +1,5 @@
+//Wenn Seite komplett geladen, wird setLocalStorage aufgerufen
+// load_foodItems: food-items werden aus LocalStorage gelesen und in hash food_items gespeichert
 $(document).ready(function(){
     $("#overview").hide();
     $("#add").hide();
@@ -20,6 +22,7 @@ $(document).ready(function(){
         $("#home").show();
         $("#overview").hide();
         $("#add").hide();
+        //erst wenn Homescreen sichtbar, wird progressbar befüllt, für optischen Effekt
         calc_progress_bar();
         
     });
@@ -32,21 +35,22 @@ $(document).ready(function(){
     
     
     $("#heartbutton").click(function(){
-        alert("Diese Seite ist leider noch nicht implementiert");
+        alert("Diese Seite ist leider noch nicht implementiert.");
         
     });
     
     $("#cogbutton").click(function(){
-        alert("Diese Seite ist leider noch nicht implementiert");
+        alert("Diese Seite ist leider noch nicht implementiert.");
         
     });
 });
-
+// noch nicht implementiert
 $( window ).resize(function() {
   console.log( $(window).height() );
   console.log( $(document).height() );
 });
 
+//Pop Up (nach Klick auf ein food item)
   $(function() {
     $( "#dialog" ).dialog({
       autoOpen: false,
@@ -59,6 +63,7 @@ $( window ).resize(function() {
         duration: 1000
       },
             buttons: {
+                //eingegebene Menge und entsprechende Kalorien werden in food_items hash gespeichert
         "Hinzufügen": function() {
             //alert(food_add_button.val());
             //alert($("#menge").val());
