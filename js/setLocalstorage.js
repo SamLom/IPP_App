@@ -2,7 +2,9 @@
 function init_localStor_foodItems(){  
     
    // alert("foodItems");
-
+//Lebensmittel[key], Menge[0] ,Eiweiß[1], Fett[2],Kohlenhydrate[3], davon Zucker[4], Ballaststoffe[5], Alkohol[6], 
+// Kalorien[7], "kcal"[8], Energiedichte[9],,,, Summe kcal[10], Summe Menge [11], g/ml [12] , true/false [13], 
+// Menge  aus Details [14], kcal aus berechneter Menge aus Details [15]
 //Lebensmittel, Menge ,Eiweiß, Fett,Kohlenhydrate, davon Zucker, Ballaststoffe, Alkohol,  Kalorien, "kcal", Energiedichte      
 localStorage.setItem("$fap_fi1$", JSON.stringify(["Aal", "100g", "14.0g", "23.0g", "0.0g", "0.0g", "0.0g", "0.0g", "263", "kcal", "2.6"]));
 localStorage.setItem("$fap_fi2$", JSON.stringify(["Absinth", "100ml", "0.0g", "0.0g", "30.0g", "0.0g", "0.0g", "0.0g", "250", "kcal", "2.0"]));
