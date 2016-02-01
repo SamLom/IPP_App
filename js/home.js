@@ -1,3 +1,4 @@
+//nei Klick aud trash-button wird food-item geköscht und Kalorien in den progressbars angepasst
 function remove_food_item(rm_but) {
   /*  $('#btn_' + rm_but.val()).remove(); */
     //alert($(rm_but).attr("id"));
@@ -13,7 +14,7 @@ function remove_food_item(rm_but) {
     
 }
 
-
+//beide porgressbars werden berechnet & Kaloriensumme wird berechnet und angezeigt
 function calc_progress_bar() {
   /*  $('#btn_' + rm_but.val()).remove(); */
   //alert("calc_progress_bar");
@@ -27,6 +28,7 @@ function calc_progress_bar() {
   var empty_part = 100;
   var  kcal_prgs = 0;
     var tmp_cals = 0;
+    //hier werden die Gesamtmengen für Eiweiß, Fett und Kohlenhydrate berechnet
      for(food_name in selected_food_items){
 
         eiweiss += parseInt(selected_food_items[food_name][1]);
