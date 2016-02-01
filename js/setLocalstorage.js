@@ -1,11 +1,8 @@
-
+//LocalStorage von food-items wird gesetzt
 function init_localStor_foodItems(){  
     
    // alert("foodItems");
-//Lebensmittel[key], Menge[0] ,Eiweiß[1], Fett[2],Kohlenhydrate[3], davon Zucker[4], Ballaststoffe[5], Alkohol[6], 
-// Kalorien[7], "kcal"[8], Energiedichte[9],,,, Summe kcal[10], Summe Menge [11], g/ml [12] , true/false [13], 
-// Menge  aus Details [14], kcal aus berechneter Menge aus Details [15]
-//Lebensmittel, Menge ,Eiweiß, Fett,Kohlenhydrate, davon Zucker, Ballaststoffe, Alkohol,  Kalorien, "kcal", Energiedichte      
+//Key, Name[0], Menge[1] ,Eiweiß[2], Fett[3],Kohlenhydrate[4], davon Zucker[5], Ballaststoffe[6], Alkohol[7], Kalorien[8], "kcal"[9], Energiedichte[10]     
 localStorage.setItem("$fap_fi1$", JSON.stringify(["Aal", "100g", "14.0g", "23.0g", "0.0g", "0.0g", "0.0g", "0.0g", "263", "kcal", "2.6"]));
 localStorage.setItem("$fap_fi2$", JSON.stringify(["Absinth", "100ml", "0.0g", "0.0g", "30.0g", "0.0g", "0.0g", "0.0g", "250", "kcal", "2.0"]));
 localStorage.setItem("$fap_fi3$", JSON.stringify(["Acai", "100g", "5.0g", "19.0g", "4.0g", "2.0g", "0.0g", "0.0g", "207", "kcal", "2.1"]));
@@ -490,6 +487,7 @@ localStorage.setItem("$fap_nofis$", JSON.stringify(480));
 //alert("foodItems");
 }
 
+//LocalStorage von Kalorien- Gewicht- und Datumsdaten(365 Tage zurück) wird gesetzt
 
 function init_localStor_chartData() {
     
@@ -505,7 +503,9 @@ function init_localStor_chartData() {
          // Startpunkt aktuelles Datum -365 Tage, also immer vor einem Jahr
     var newDate = new Date(y, mon, (day-365+i));
     //newDate.setHours(0, i, 0, 0);
+         // Gewicht Zufallswetre um 80
     var a = Math.round((Math.random() + 80) *10)/10;
+         //Kalorien Zufalls werte um 1800
     var b = Math.round(Math.random() * 400) + 1800;
 
     chartData.push({
